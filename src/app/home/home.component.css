@@ -1,0 +1,38 @@
+.footer {
+    
+    left: 30px;
+    right:30px;
+    bottom: 0;
+    width: 100%;
+    background-color:rgb(21, 21, 49);
+    color: white;
+    text-align: center;
+ }
+ 
+
+ .topright{
+    position: fixed;
+    top:0 px;
+    right: 0 px;
+    float: right;
+    
+    font-size: 6px;
+}
+
+.topcorner{
+    position:absolute;
+    top:30 px;
+    right:80px;
+    float:right;
+    padding-right: 23px;
+   }
+ 
+
+.logo{
+    height: 100px;
+    padding-left: 200px;
+    padding-right:200px;
+    position: absolute;
+}
+
+ 

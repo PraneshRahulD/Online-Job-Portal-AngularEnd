@@ -1,0 +1,137 @@
+
+
+    <div class="container" style="float: right;">
+      <div class="topcorner" align="center">
+          <app-login></app-login>
+        </div>
+      </div>
+
+      <div class="logo">
+        <img src="assets/images/site.jpg">
+      </div>
+<br><br><br><br><br><br>
+<form class="form-inline" align="center" style="margin-top: 100px; margin-left: 0px;">
+  <input class="form-group mx-sm-2 mb-1" [(ngModel)]="text1" [ngModelOptions]="{standalone: true}" placeholder="Skills"
+  aria-label="Search">
+  <input class="form-group mx-sm-2 mb-1" [(ngModel)]="text2" [ngModelOptions]="{standalone: true}" placeholder="Location"
+  aria-label="Location">
+  <button class="btn btn-primary" type="submit" (click)="search(text1,text2)"> Find Jobs</button>
+</form>
+
+
+
+
+<br>
+              <br>
+              <br><br><br>
+              
+               
+                
+              
+
+    
+   <h4><u><b>Hot Jobs</b></u></h4>
+    <hr>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row cd">
+            <div class="col sm-3" *ngFor="let post of posting  | slice:0:3">
+              <div [routerLink]="['/dashboard',post._id]" style="background-color:whitesmoke;">
+               
+                  <div class="card-body">
+                      <h6>{{post.title}}</h6>
+                      <p>{{post.role}}</p>
+                      <h6>Location(s):{{post.location}}</h6>              
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="carousel-item">
+            <div class="row cd">
+              <div class="col sm-3" *ngFor="let post of posting  | slice:3:6">
+                <div [routerLink]="['/dashboard',post._id]" style="background-color:whitesmoke;">
+                 
+                    <div class="card-body">
+                        <h6>{{post.title}}</h6>
+                        <p>{{post.role}}</p>
+                        <h6>Location(s):Chennai/Bangalore</h6>              
+                    </div>
+                
+                </div>
+              </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev"  href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    </div>
+    <hr>
+
+
+    
+  
+  
+    <!--carousel-->
+   
+  <h4><u><b>Select By Companies </b></u></h4>
+  
+  <carousel [itemsPerSlide]="itemsPerSlide"
+         [singleSlideOffset]="singleSlideOffset"
+         [interval]="false"
+         [noWrap]="noWrap">
+ <slide *ngFor="let slide of slides; let index=index" class="mx-auto">
+   <img [src]="slide.image" alt="image slide" style="display: block; width: 50%; height:20%">
+   <div class="carousel-caption">
+     <h4>Slide {{index}}</h4>
+   </div>
+ </slide>
+</carousel>
+
+
+<h3><u>Career Tips</u></h3>
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card w-60">
+        <div class="card-body">
+          <b>01.  Ready to work form home?Here's How to be be calm and Productive</b><br>
+          <p>May2020</p><br>
+            <b>02. 8Most Popular part time jobs for student</b><br>
+        <p>May2020</p><br>
+        <b>03. 5 Work from Home tips Who genuinely want to work and Contribute</b><br>
+        <p>May 2020</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card w-60">
+        <div class="card-body">
+        <b>04. These Best Part Time Jobs do not require You to be a Topper</b><br>
+        <p>May 2020</p><br>
+        <b>05. 10 Best Skype Interview Tips for job Seekers who want to succeed</b><br>
+        <p>May2020</p><br>
+        <b>06.Top Tips and Resources to Manage your Career Amid Corona Virus</b><br>
+        <p>May 2020</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="footer">
+      <small>&copy; Copyright 2020, JobSite</small>
+    </div>
+
+ 
+

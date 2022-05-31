@@ -1,0 +1,257 @@
+<div class="card">
+<div class="container">
+
+    <form class="form" [formGroup]="postForm"  *ngIf="!isEditing">
+     <h4 class="card-header">Job Title</h4><br>
+        <h5>JobId:</h5>
+        <input class="form-contol mr-2" type="number" name="id"
+        formControlName="id" placeholder="ID">
+        <br>
+        <h5>Job Title:</h5>
+        <input class="form-contol mr-2" type="text" name="title"
+        formControlName="title" placeholder="Title">
+        <br>
+        <h5>Role:</h5>
+        <input class="form-contol mr-2" type="text" name="role"
+        formControlName="role" placeholder="Role">
+        <br>
+        
+        <h5>Company Name:</h5>
+        <input class="form-contol mr-2" type="text" name="cname"
+        formControlName="cname" placeholder="Cname">
+        <br>
+        <h5>Salary:</h5>
+        <input class="form-contol mr-2" type="number" name="salary"
+        formControlName="salary" placeholder="Salary">
+        <br>
+        <h5>Location:</h5>
+        <input class="form-contol mr-2" type="text" name="location"
+        formControlName="location" placeholder="Location">
+        <br>
+        <h5>Skills:</h5>
+        <input class="form-contol mr-2" type="text" name="skills"
+        formControlName="skills" placeholder="Skills">
+        <br>
+        <h5>Description:</h5>
+        <input class="form-contol mr-2" type="text" name="jobdesc"
+        formControlName="jobdesc" placeholder="Jobdesc">
+        <br>
+        <br>
+    
+    <button class="btn btn-info" type="submit"
+    [disabled]="!postForm.valid" (click)="addJob()">
+     <i class="fa fa-plus-square"></i>Add
+    </button>
+</form>
+<br>
+</div>
+</div>
+ 
+<div class="card mb-3" *ngIf="isLoading">
+    <h4 class="card-header"> Job Lists</h4>
+    <div class="card-body">
+
+<table class="table table-bordered" >
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">JobId</th>
+        <th scope="col">Title</th>
+        <th scope="col">Role</th> 
+        <th scope="col">CName</th> 
+        <th scope="col">Salary</th> 
+        <th scope="col">Location</th> 
+        <th scope="col">Skills</th> 
+        <th scope="col">Description</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr>
+        <td colspan="8"> </td>
+      </tr>  
+    </tbody>
+    <tbody *ngIf="!isEditing">
+      <tr *ngFor="let post of posting">
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td> 
+        <td>{{post.role}}</td>
+        <td>{{post.cname}}</td> 
+        <td>{{post.salary}}</td>  
+        <td>{{post.location}}</td>  
+        <td>{{post.skills}}</td>  
+        <td>{{post.jobdesc}}</td>
+        <td>
+          <button  type ="button" class="btn btn-info btn-xs" (click)="enableEditing(post)">
+            <i class="fa fa-retweet"></i> Edit
+          </button>
+          <button  type="button" class="btn btn-danger btn-xs" (click)="deleteJob(post)" type="submit" >
+            <i class="fa fa-close"></i> Delete
+          </button>
+        </td>
+      </tr>  
+    </tbody>  
+
+    <tbody *ngIf="isEditing">
+           <tr>
+             <td colspan="9">
+               <form class="form-inline" #form="ngForm" (ngSubmit)="editJob(post)"> 
+
+                 <input class="form-control" type="number" name="id"
+                        [(ngModel)]="post.id" placeholder="ID" required> 
+
+                 <input class="form-control" type="text" name="title"
+                        [(ngModel)]="post.title" placeholder="Title"  required> 
+
+                 <input class="form-control" type="text" name="role"
+                        [(ngModel)]="post.role" placeholder="Role"  required> 
+
+                  <input class="form-control" type="text" name="cname"
+                        [(ngModel)]="post.cname" placeholder="companyname"  required>   
+
+                  <input class="form-control" type="number" name="salary"
+                        [(ngModel)]="post.salary" placeholder="Salary"  required>  
+
+                  <input class="form-control" type="text" name="location"
+                        [(ngModel)]="post.location" placeholder="Location"  required>  
+
+                  <input class="form-control" type="text" name="skills"
+                        [(ngModel)]="post.skills" placeholder="Skills"  required>  
+
+                  <input class="form-control" type="text" name="jobdesc"
+                        [(ngModel)]="post.jobdesc" placeholder="Description"  required>  
+
+                  
+
+                  
+
+                 <button class="btn btn-sm btn-primary mr-2" type="submit" >
+                   <i class="fa fa-floppy-o"></i> Save
+                 </button>
+                 <button class="btn btn-sm btn-warning" (click)="cancelEditing()">
+                   <i class="fa fa-times"></i> Cancel
+                 </button>
+               </form>
+             </td>
+           </tr>
+         </tbody>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

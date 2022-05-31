@@ -1,0 +1,40 @@
+
+<div class="container" style="width:28rem">
+    <!--<div class="row">-->
+      <div class="card" style="width:80rem;" style="background-color:lightskyblue;">
+        <h4>Login</h4>
+        <div class="card-body">
+      <div class="col-md-10">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="form-group" [ngClass]="setClassUserName()">
+            <!--<label for="username">User Name</label>-->
+            <input type="text" class="form-control" name="username" placeholder="UserName:" 
+                formControlName="username">
+          </div>
+          <div class="form-group" [ngClass]="setClassEmail()">
+            <!--<label for="email">Email address</label>-->
+            <input type="email" class="form-control" name="email" 
+              formControlName="email" placeholder="email:">
+          </div>
+          <div class="form-group" [ngClass]="setClassPassword()">
+            <!--<label for="password">Password</label>-->
+            <input type="password" class="form-control" name="password" 
+              formControlName="password" placeholder="Password:">
+          </div>
+          <div class="text-center">
+          <button type="submit" class="btn btn-danger"
+              [disabled]="!loginForm.valid">Login</button></div>
+              <div class="user">
+                <h6><b>New User? Register as:</b>&nbsp;
+                <button type="button" class="btn btn-link-primary"
+                  routerLink="/seeker"><b>Fresher</b>/</button>
+                <button type="button" class="btn btn-link-primary"
+                  routerLink="/register"><b>Professional</b></button></h6>
+              </div>
+        </form>
+      </div>
+      </div>
+    <!--</div>-->
+  </div>
+  </div>
+

@@ -1,0 +1,8 @@
+<div *ngFor="let job of posting | search:text1:text2">
+    <h4 >Job Details</h4>
+    <h6>Title:{{job.title}}</h6>
+    <h6>Role:{{job.role}}</h6>
+    <h6>Location:{{job.location}}</h6>
+    <h6>Salary:{{job.salary}}</h6>
+    <hr>
+</div>

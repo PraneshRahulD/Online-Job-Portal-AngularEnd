@@ -1,0 +1,13 @@
+.added {
+    
+        background-color: lightgrey;
+        width: 100px;
+        border: 15px;
+        padding: 10px;
+        margin: 100px;
+      
+}
+
+.button{
+        size:2px;
+}

@@ -1,0 +1,200 @@
+<br>
+<div class="container">
+    <h2>Job Seeker  Registration</h2>
+    <ul class="nav nav-tabs" role="tablist" id="nav-tab" style="background-color: #011D63;">
+        <li class="nav-item">
+        <a class="nav-link active" href="#nav-personal" id="nav-personal-tab" role="tabpanel" data-toggle="tab">Personal<a class="vl1"></a></a></li>
+        <li class="nav-item">
+        <a class="nav-link" href="#nav-employment" id="nav-employment-tab" role="tabpanel" data-toggle="tab" >Employment<a class="vl2"></a></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#nav-education" id="nav-education-tab" role="tabpanel" data-toggle="tab">Education</a>
+    </li>
+    </ul>
+    <div class="tab-content" id="nav-tabContent">
+        <!--Personal-->
+        <div class="tab-pane fade show active" id="nav-personal" role="tabpanel" aria-labelledby="nav-personal-tab">
+            <div class="card-body">
+            <form class="form" [formGroup]="form">
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" formControlName="username" name="username" placeholder="Enter Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control"  formControlName="email" name="email" placeholder="Enter Email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control"  formControlName="password" name="password" placeholder="Enter Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="mobile" class="col-sm-2 col-form-label">Mobile No</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" formControlName="mobile" name="mobile" placeholder="Enter Mobile Number">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="address1" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" formControlName="address" name="address" placeholder="Enter Address Line 1">
+                    </div>
+                </div>
+                
+                
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-4">
+                      <input type="text" class="form-control" formControlName="city" name="city" placeholder="Enter City">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" formControlName="state" name="state" placeholder="Enter State">
+                      </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-4">
+                      <input type="number" class="form-control" formControlName="pincode" name="pincode" placeholder="Enter Zip Code">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" formControlName="country" name="country" placeholder="Enter Country">
+                      </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Total work experience</label>
+                    <div class="col-sm-4">
+                      <input type="number" class="form-control" formControlName="years" name="years" placeholder="Enter No of years">
+                    </div>
+                                    </div>
+                <div class="form-group row">
+                    <label for="skills" class="col-sm-2 col-form-label">Skills</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" formControlName="skills" name="skills" placeholder="Enter Skills">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="resume" class="col-sm-2 col-form-label">Upload Resume</label>
+                    <div class="col-sm-4">
+                        <input type="file" class="form-control-file" formControlName="resume" name="resume">
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-success btn-sm">Upload</button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h6>
+                    <!--<button type="submit" class="btn btn-warning"><b>Save</b></button>&nbsp;-->
+                    <a type="button" class="btn btn-link" id="nav-employment-tab" data-toggle="tab" href="#nav-employment"><b>Next</b></a></h6>
+                </div>
+            </form>
+            </div>
+        </div>
+        <!--Employment-->
+        <div class="tab-pane fade show" id="nav-employment" role="tabpanel" aria-labelledby="nav-employment-tab">
+            <div class="card-body">
+                <form class="form" [formGroup]="form">
+                    <div class="form-group row">
+                        <label for="cemployer" class="col-sm-2 col-form-label">Current Employer</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" formControlName="curemp" name="curemp" placeholder="Enter Current Employer">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="designation" class="col-sm-2 col-form-label">Designation</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" formControlName="designation" name="designation" placeholder="Enter Designation">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="description1" class="col-sm-2 col-form-label">Job Description</label>
+                        <div class="col-sm-10">
+                            <textarea type="text" class="form-control" formControlName="desc" name="desc" placeholder="Job description" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="months1" class="col-sm-2 col-form-label">Experience in months</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" formControlName="months" name="months" placeholder="Enter No of months">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="pemployer" class="col-sm-2 col-form-label">Previous Employer</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" formControlName="preemp" name="preemp" placeholder="Enter Previous Employer">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="description2" class="col-sm-2 col-form-label">Job Description</label>
+                        <div class="col-sm-10">
+                            <textarea type="text" class="form-control" formControlName="desc1" name="desc1" placeholder="Job description" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="months2" class="col-sm-2 col-form-label">Experience in months</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" formControlName="months1" name="months1" placeholder="Enter No of months">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h6>
+                        <!--<button type="submit" class="btn btn-warning"><b>Save</b></button>&nbsp;-->
+                        <a type="button" class="btn btn-link" id="nav-education-tab" data-toggle="tab"
+                          href="#nav-education"><b>Next</b></a></h6>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--Education-->
+        <div class="tab-pane fade show" id="nav-education" role="tabpanel" aria-labelledby="nav-education-tab">
+            <div class="card-body">
+                <form class="form" [formGroup]="form">
+                    <div class="form-group row">
+                        <label for="college" class="col-sm-2 col-form-label">College/University</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" formControlName="college" name="college" placeholder="Enter College/University">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="passed" class="col-sm-2 col-form-label">Passed on</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" formControlName="passed" name="passed" placeholder="Enter passed on year">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="graduated" class="col-sm-2 col-form-label">Graduated</label>
+                        <div class="col-sm-10">
+                            <select class="custom-select" formControlName="graduated" name="graduated" class="form-control">
+                                <option value="" selected disabled>Graduated</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="qualify" class="col-sm-2 col-form-label">Skills/Qualifications</label>
+                        <div class="col-sm-10">
+                            <textarea type="text" class="form-control" formControlName="qualifications" name="qualifications" placeholder="Enter Qualifications" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="certify" class="col-sm-2 col-form-label">Certifications</label>
+                        <div class="col-sm-10">
+                            <textarea type="text" class="form-control" formControlName="certifications" name="certifications" placeholder="Enter Certifications" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h6>
+                            <button type="submit" class="btn btn-primary" (click)="addUser()"><b>Register</b></button>
+                        </h6>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

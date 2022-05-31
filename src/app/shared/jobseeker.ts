@@ -1,0 +1,24 @@
+export class JobSeeker {
+    _id?:string;
+    name:string;
+    email?:string;
+    password?:string;
+    mobileno?:number;
+    address?:string;
+    workexp?:number;
+    skills?:string;
+    resume?:string;
+    college?:string;
+    passedon?:string;
+    graduated?:string;
+    graduateschool?:string;
+    yrsattended?:string;
+    certification?:string;
+    currentemp?:string;
+    destination?:string;
+    jobdesc?:string;
+    experience?:number;
+    previousemp?:string;
+    jobdes?:string;
+    exp?:string
+}
